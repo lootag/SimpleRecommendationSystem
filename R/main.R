@@ -1,7 +1,7 @@
 rm(list = ls())
 setwd(getwd())
 
-packages <- c('readr', 'dplyr', 'magrittr')
+packages <- c('readr', 'dplyr', 'magrittr', 'DescTools')
 for( package in 1:length(packages))
 {
   if(!(packages[package] %in% installed.packages()))
