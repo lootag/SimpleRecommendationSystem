@@ -27,6 +27,7 @@ byUser <- lapply(users, makeDf, dataset = data)%>%
   lapply(sortDf)
 
 byUserFull <- do.call(rbind, byUser) # Point 1
+write_csv(byUserFull, '../Point1.csv')
 byUserTrain <- lapply(byUser, getTrain)
 train <- do.call(rbind, byUserTrain)
 byUserTest <- lapply(byUser, getTest)
